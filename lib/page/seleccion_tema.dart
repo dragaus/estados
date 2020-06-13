@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/tema.dart';
+import './huella_color.dart';
 
 class SeleccionTema extends StatelessWidget {
   final Function cambiarColor;
@@ -23,7 +24,7 @@ class SeleccionTema extends StatelessWidget {
       ),
     );
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +43,12 @@ class SeleccionTema extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (ctx) => HuellaColor(),
+          ),
+        ),
         child: Icon(Icons.pets),
       ),
     );
